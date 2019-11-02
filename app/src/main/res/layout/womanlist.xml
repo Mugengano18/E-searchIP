@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:id="@+id/ParentLayout">
+
+
+    <ImageView
+        android:id="@+id/womanImg"
+        android:layout_width="360dp"
+        android:layout_height="155dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+            android:id="@+id/storename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name of the store"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="185dp"/>
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/category"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="categories"-->
+<!--        android:layout_marginLeft="200dp"-->
+<!--        android:layout_marginTop="70dp"/>-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/location"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="location"-->
+<!--        android:layout_marginLeft="200dp"-->
+<!--        android:layout_marginTop="100dp"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/phonen"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="phone"-->
+<!--        android:layout_marginLeft="200dp"-->
+<!--        android:layout_marginTop="130dp"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/rate"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="rating"-->
+<!--        android:layout_marginTop="160dp"-->
+<!--        android:layout_marginLeft="310dp"/>-->
+
+
+
+</RelativeLayout>

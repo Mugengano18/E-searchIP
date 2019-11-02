@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "304746789567",
+    "firebase_url": "https://shoplarity-a7c6a.firebaseio.com",
+    "project_id": "shoplarity-a7c6a",
+    "storage_bucket": "shoplarity-a7c6a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304746789567:android:0342eb9d890367da9a640a",
+        "android_client_info": {
+          "package_name": "com.android1.shoplarity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "304746789567-8ou9m7i2s4fon32bmcusuieeis0u1al7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.android1.shoplarity",
+            "certificate_hash": "225a42c9e294a8d9ee9b7a5971cd4c379b02ce0f"
+          }
+        },
+        {
+          "client_id": "304746789567-ocdqc10uqcbndae0njmj1hm8o6hf346b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTIKbgh56KOh8d_DCr6QrvLruXJut6mYs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "304746789567-ocdqc10uqcbndae0njmj1hm8o6hf346b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
