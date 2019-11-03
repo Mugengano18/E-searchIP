@@ -66,6 +66,16 @@ public class womenllistAdapter extends RecyclerView.Adapter<womenllistAdapter.wo
 
             }
         });
+        holder.favorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatabaseReference productRef = FirebaseDatabase
+                        .getInstance()
+                        .getReference(credentials.FIREBASE_CHILD);
+                productRef.push().setValue(womenclothess.get(position));
+                Toast.makeText(context,"saved",Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 
@@ -109,12 +119,6 @@ public class womenllistAdapter extends RecyclerView.Adapter<womenllistAdapter.wo
 
         @Override
         public void onClick(View v) {
-            if (v==favorite){
-                DatabaseReference productRef = FirebaseDatabase
-                        .getInstance()
-                        .getReference(credentials.FIREBASE_CHILD);
-                productRef.push().setValue(womenclothess);
-            }
         }
     }
 
