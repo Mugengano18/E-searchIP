@@ -1,7 +1,9 @@
 package com.android1.shoplarity.Adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.android1.shoplarity.Apifolder.Business;
 import com.android1.shoplarity.R;
 import com.android1.shoplarity.credentials;
+import com.android1.shoplarity.models.HomeActivity;
 import com.android1.shoplarity.models.StoredetailsActivity;
 import com.android1.shoplarity.models.detailsfragment;
 import com.google.firebase.database.DatabaseReference;
@@ -60,9 +63,7 @@ public class womenllistAdapter extends RecyclerView.Adapter<womenllistAdapter.wo
                 Intent webIntent = new Intent(Intent.ACTION_VIEW,
                         Uri.parse(womenclothess.get(position).getUrl()));
                 context.startActivity(webIntent);
-//                Intent intent= new Intent(context, StoredetailsActivity.class);
-//                intent.putExtra("details", Parcels.wrap(womenclothess));
-//                context.startActivity(intent);
+
             }
         });
 
@@ -77,19 +78,24 @@ public class womenllistAdapter extends RecyclerView.Adapter<womenllistAdapter.wo
         //creating the ui element
         @BindView(R.id.womanImg) ImageView image1;
         @BindView(R.id.storename)TextView text5;
-//        @BindView(R.id.category)TextView cat;
-//        @BindView(R.id.location)TextView loc;
-//        @BindView(R.id.phonen)TextView phone;
-//        @BindView(R.id.rate)TextView rate;
         @BindView(R.id.ParentLayout)
         RelativeLayout parent;
         @BindView(R.id.fav)
         Button favorite;
-
+        private int orientation;
+        private void createOrientation(int position){
+            HomeActivity homeActivity =new HomeActivity();
+        }
         private Context cont;
         public womanViewHolder(@NonNull View itemView) {
             super(itemView);
             //accessing the views from itemview
+            //this is to set the orientation
+            orientation=itemView.getResources().getConfiguration().orientation;
+            if (orientation== Configuration.ORIENTATION_LANDSCAPE){
+               createOrientation(0);
+
+            }
             ButterKnife.bind(this,itemView);
             context=itemView.getContext();
             favorite.setOnClickListener(this);
@@ -98,10 +104,6 @@ public class womenllistAdapter extends RecyclerView.Adapter<womenllistAdapter.wo
 
         public void bindList(Business business) {
             text5.setText(business.getName());
-//            cat.setText(business.getCategories().get(0).getTitle());
-//            loc.setText(business.getLocation().getAddress1());
-//            phone.setText(business.getPhone());
-//            rate.setText("rate " + String.valueOf(business.getRating()));
             Picasso.get().load(business.getImageUrl()).into(image1);
         }
 

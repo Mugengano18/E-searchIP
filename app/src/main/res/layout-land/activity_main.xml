@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_width="900dp"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/travel"
+        />
+
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="E-Search"
+        android:textSize="90dp"
+        android:tint="#6F000000"
+        app:fontFamily="@font/almendra_italic" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="150dp"
+        android:gravity="center_horizontal"
+        android:text="Find Any Store You Want Anytime "
+        android:textSize="40dp"
+        app:fontFamily="@font/advent_pro_semibold" />
+
+
+    <Button
+        android:id="@+id/getStarted"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Get Started"
+        android:textSize="25dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/roundingbutton"/>
+</RelativeLayout>
