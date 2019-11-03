@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -14,6 +17,7 @@ import com.android1.shoplarity.Adapters.womenllistAdapter;
 import com.android1.shoplarity.Apifolder.Apiresponse;
 import com.android1.shoplarity.Apifolder.Business;
 import com.android1.shoplarity.R;
+import com.android1.shoplarity.credentials;
 import com.android1.shoplarity.network.Api;
 import com.android1.shoplarity.network.Client;
 
@@ -43,10 +47,10 @@ public class ShoesActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         shoes=new ArrayList<>();
         recyclerView1.setHasFixedSize(true);
-
-
+        Intent intent = getIntent();
+        String location = intent.getStringExtra("location");
         Api clothe1= Client.getclient();
-        Call<Apiresponse> call=clothe1.getCategory("shoes","USA");
+        Call<Apiresponse> call=clothe1.getCategory("shoes",location);
         call.enqueue(new Callback<Apiresponse>(){
             @Override
             public void onResponse(Call<Apiresponse> call, Response<Apiresponse> response) {

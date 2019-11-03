@@ -3,13 +3,22 @@ package com.android1.shoplarity.models;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
@@ -24,7 +33,7 @@ import com.google.firebase.auth.FirebaseUser;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class HomeActivity extends AppCompatActivity{
+public class HomeActivity extends AppCompatActivity {
     @BindView(R.id.grid1)
     GridView imageGrid;
     private String[]names={"Clothes","Shoes","Cars","Furniture","Phones","Antique"};
@@ -38,6 +47,7 @@ public class HomeActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
         ButterKnife.bind(this);
         categoryAdapter categoryAdapter=new categoryAdapter(HomeActivity.this,foto_id,names);
         imageGrid.setAdapter(categoryAdapter);
@@ -52,7 +62,7 @@ public class HomeActivity extends AppCompatActivity{
                         startActivity(intent1);
                         break;
                     case 1:
-                        Intent intent2=new Intent(HomeActivity.this, ShoesActivity.class);
+                        Intent intent2=new Intent(HomeActivity.this, shoesloc.class);
                         startActivity(intent2);
                         break;
                     case 2:

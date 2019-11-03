@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -16,8 +17,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android1.shoplarity.Apifolder.Business;
 import com.android1.shoplarity.R;
+import com.android1.shoplarity.credentials;
 import com.android1.shoplarity.models.StoredetailsActivity;
 import com.android1.shoplarity.models.detailsfragment;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
@@ -79,6 +83,8 @@ public class womenllistAdapter extends RecyclerView.Adapter<womenllistAdapter.wo
 //        @BindView(R.id.rate)TextView rate;
         @BindView(R.id.ParentLayout)
         RelativeLayout parent;
+        @BindView(R.id.fav)
+        Button favorite;
 
         private Context cont;
         public womanViewHolder(@NonNull View itemView) {
@@ -86,7 +92,7 @@ public class womenllistAdapter extends RecyclerView.Adapter<womenllistAdapter.wo
             //accessing the views from itemview
             ButterKnife.bind(this,itemView);
             context=itemView.getContext();
-            itemView.setOnClickListener(this);
+            favorite.setOnClickListener(this);
         }
 
 
@@ -101,7 +107,12 @@ public class womenllistAdapter extends RecyclerView.Adapter<womenllistAdapter.wo
 
         @Override
         public void onClick(View v) {
-
+            if (v==favorite){
+                DatabaseReference productRef = FirebaseDatabase
+                        .getInstance()
+                        .getReference(credentials.FIREBASE_CHILD);
+                productRef.push().setValue(womenclothess);
+            }
         }
     }
 

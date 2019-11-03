@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".models.shoesloc">
+
+    <EditText
+        android:id="@+id/loc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="enter the location"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+    <Button
+        android:id="@+id/findShoes"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Find shoes"
+        android:background="@color/bluesky"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="100dp"
+        />
+    <Button
+        android:id="@+id/SavedShoes"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Save shoes"
+        android:background="@color/bluesky"
+        android:layout_marginTop="490dp"
+        android:layout_marginLeft="100dp"
+        />
+</RelativeLayout>
