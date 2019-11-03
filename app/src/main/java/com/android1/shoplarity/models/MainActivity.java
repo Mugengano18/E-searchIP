@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -25,7 +27,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ButterKnife.bind(this);
 
         getStarted.setOnClickListener(this);
-
+        Animation shake = AnimationUtils.loadAnimation(this, R.anim.shake);// I found the codes on stackoverflow
+        getStarted.startAnimation(shake);
 }
     @Override
     public void onClick(View v) {//these codes will direct you to the next activity
