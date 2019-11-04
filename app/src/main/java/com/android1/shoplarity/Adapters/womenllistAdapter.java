@@ -1,6 +1,5 @@
 package com.android1.shoplarity.Adapters;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -21,13 +20,9 @@ import com.android1.shoplarity.Apifolder.Business;
 import com.android1.shoplarity.R;
 import com.android1.shoplarity.credentials;
 import com.android1.shoplarity.models.HomeActivity;
-import com.android1.shoplarity.models.StoredetailsActivity;
-import com.android1.shoplarity.models.detailsfragment;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
-
-import org.parceler.Parcels;
 
 import java.util.List;
 

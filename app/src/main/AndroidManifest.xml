@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".models.shoesloc"></activity>
-        <activity android:name=".models.StoredetailsActivity" />
         <activity android:name=".models.SignUpActivity" />
         <activity android:name=".models.LoginActivity" />
         <activity android:name=".models.childrenList" />
