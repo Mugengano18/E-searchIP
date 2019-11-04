@@ -50,7 +50,7 @@ public class ShoesActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String location = intent.getStringExtra("location");
         Api clothe1= Client.getclient();
-        Call<Apiresponse> call=clothe1.getCategory("shoes",location);
+        Call<Apiresponse> call=clothe1.getCategory("shoes","USA");
         call.enqueue(new Callback<Apiresponse>(){
             @Override
             public void onResponse(Call<Apiresponse> call, Response<Apiresponse> response) {

@@ -62,7 +62,7 @@ public class HomeActivity extends AppCompatActivity {
                         startActivity(intent1);
                         break;
                     case 1:
-                        Intent intent2=new Intent(HomeActivity.this, shoesloc.class);
+                        Intent intent2=new Intent(HomeActivity.this, ShoesActivity.class);
                         startActivity(intent2);
                         break;
                     case 2:
