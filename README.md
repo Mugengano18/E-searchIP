@@ -1,4 +1,4 @@
-# ShopLarity
+# E-search
 - This is an App that is used to search for any store the user wants depending on his/her needs and mainly the stores in the united states
 
 ## Author
